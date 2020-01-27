@@ -51,7 +51,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/clevergo/httprouter"
+	"github.com/clevergo/clevergo"
 	"github.com/clevergo/jsend"
 )
 
@@ -85,7 +85,7 @@ func getUsers(w http.ResponseWriter, r *http.Request) {
 }
 
 func getUser(w http.ResponseWriter, r *http.Request) {
-	id := httprouter.Params(r).ByName("id")
+	id := clevergo.GetParams(r).Get("id")
 	user, found := users.find(id)
 	if !found {
 		handleError(w, jsend.Error(w, "User Not Found", http.StatusNotFound))
@@ -128,7 +128,7 @@ func createUser(w http.ResponseWriter, r *http.Request) {
 }
 
 func deleteUser(w http.ResponseWriter, r *http.Request) {
-	id := httprouter.Params(r).ByName("id")
+	id := clevergo.GetParams(r).Get("id")
 	user, found := users.find(id)
 	if !found {
 		handleError(w, jsend.Error(w, "User Not Found", http.StatusNotFound))
@@ -140,12 +140,12 @@ func deleteUser(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	router := httprouter.New()
-	router.GET("/users", getUsers)
-	router.POST("/users", createUser)
-	router.GET("/users/:id", getUser)
-	router.DELETE("/users/:id", deleteUser)
-	http.ListenAndServe(":1234", router)
+	app := clevergo.New(":1234")
+	app.Get("/users", getUsers)
+	app.Post("/users", createUser)
+	app.Get("/users/:id", getUser)
+	app.Delete("/users/:id", deleteUser)
+	app.ListenAndServe()
 }
 
 type Users struct {
