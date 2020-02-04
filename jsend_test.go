@@ -4,11 +4,13 @@
 
 package jsend
 
-import "testing"
-import "net/http/httptest"
-import "encoding/json"
-import "reflect"
-import "net/http"
+import (
+	"encoding/json"
+	"net/http"
+	"net/http/httptest"
+	"reflect"
+	"testing"
+)
 
 func TestWrite(t *testing.T) {
 	tests := []struct {
