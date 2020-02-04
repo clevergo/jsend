@@ -1,7 +1,7 @@
-# JSend's implementation writen in Go(aka golang)
+# JSend's implementation writen in Go(golang)
 [![Build Status](https://travis-ci.org/clevergo/jsend.svg?branch=master)](https://travis-ci.org/clevergo/jsend) [![Coverage Status](https://coveralls.io/repos/github/clevergo/jsend/badge.svg?branch=master)](https://coveralls.io/github/clevergo/jsend?branch=master) [![GoDoc](https://godoc.org/github.com/clevergo/jsend?status.svg)](http://godoc.org/github.com/clevergo/jsend) [![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/jsend)](https://goreportcard.com/report/github.com/clevergo/jsend) [![Release](https://img.shields.io/github/release/clevergo/jsend.svg?style=flat-square)](https://github.com/clevergo/jsend/releases)
 
-This package is an implementation of [JSend](https://github.com/omniti-labs/jsend) written in Go(aka golang).
+This package is an implementation of [JSend](https://github.com/omniti-labs/jsend) specification written in Go(golang).
 
 ## Installation
 
