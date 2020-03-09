@@ -1,4 +1,4 @@
-module github.com/clevergo/jsend-example
+module github.com/clevergo/jsend/example
 
 go 1.13
 
