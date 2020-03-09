@@ -26,9 +26,7 @@ jsend.ErrorCode(w, "error message", errorCode)
 jsend.ErrorCodeData(w, "error message", errorCode, "any type of data")
 ```
 
-### Example
-
-See [JSend Example](https://github.com/clevergo/jsend-example).
+See [Example](example).
 
 ### Error Handling
 
