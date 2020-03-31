@@ -30,7 +30,7 @@ See [Example](example).
 
 ### Error Handling
 
-It is application responsibility to handle error, see [Example](#example) for further more detail.
+It is application responsibility to handle error, see [Example](example) for further more detail.
 
 ### Status Code
 
