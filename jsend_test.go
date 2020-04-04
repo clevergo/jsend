@@ -10,6 +10,8 @@ import (
 	"net/http/httptest"
 	"reflect"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestWrite(t *testing.T) {
@@ -82,4 +84,10 @@ func TestWrite(t *testing.T) {
 			t.Errorf("expected body %v, got %v", test.body, actualBody)
 		}
 	}
+}
+
+func TestWriteError(t *testing.T) {
+	w := httptest.NewRecorder()
+	err := Write(w, NewError("msg", 0, make(chan int)))
+	assert.NotNil(t, err)
 }

@@ -21,57 +21,60 @@ type Body struct {
 	// The status indicates the execution result of request,
 	// it can be one of "success", "fail" and "error".
 	Status  string      `json:"status"`
-	Data    interface{} `json:"data"`
+	Data    interface{} `json:"data,omitempty"`
 	Message string      `json:"message,omitempty"`
 	Code    int         `json:"code,omitempty"`
 }
 
-// Error writes error body with the given message.
-func Error(w http.ResponseWriter, message string, statuses ...int) error {
-	body := Body{
-		Status:  StatusError,
-		Message: message,
+// New returns a success body with the given data.
+func New(data interface{}) Body {
+	return Body{
+		Status: StatusSuccess,
+		Data:   data,
 	}
-	return Write(w, body, statuses...)
 }
 
-// ErrorCode writes error body with the given message and code.
-func ErrorCode(w http.ResponseWriter, message string, code int, statuses ...int) error {
-	body := Body{
-		Status:  StatusError,
-		Message: message,
-		Code:    code,
+// NewFail returns a fail body with the given data.
+func NewFail(data interface{}) Body {
+	return Body{
+		Status: StatusFail,
+		Data:   data,
 	}
-	return Write(w, body, statuses...)
 }
 
-// ErrorCodeData writes error body with the given message, code and data.
-func ErrorCodeData(w http.ResponseWriter, message string, code int, data interface{}, statuses ...int) error {
-	body := Body{
+// NewError returns a error body with given message.
+func NewError(message string, code int, data interface{}) Body {
+	return Body{
 		Status:  StatusError,
 		Message: message,
 		Code:    code,
 		Data:    data,
 	}
-	return Write(w, body, statuses...)
+}
+
+// Error writes error body with the given message.
+func Error(w http.ResponseWriter, message string, statuses ...int) error {
+	return Write(w, NewError(message, 0, nil), statuses...)
+}
+
+// ErrorCode writes error body with the given message and code.
+func ErrorCode(w http.ResponseWriter, message string, code int, statuses ...int) error {
+	return Write(w, NewError(message, code, nil), statuses...)
+}
+
+// ErrorCodeData writes error body with the given message, code and data.
+func ErrorCodeData(w http.ResponseWriter, message string, code int, data interface{}, statuses ...int) error {
+	return Write(w, NewError(message, code, data), statuses...)
 }
 
 // Fail writes failed body with the given data.
 func Fail(w http.ResponseWriter, data interface{}, statuses ...int) error {
-	body := Body{
-		Status: StatusFail,
-		Data:   data,
-	}
-	return Write(w, body, statuses...)
+	return Write(w, NewFail(data), statuses...)
 }
 
 // Success writes successful body with the given data.
 func Success(w http.ResponseWriter, data interface{}, statuses ...int) error {
-	body := Body{
-		Status: StatusSuccess,
-		Data:   data,
-	}
-	return Write(w, body, statuses...)
+	return Write(w, New(data), statuses...)
 }
 
 // Write writes the body to http.ResponseWriter.
