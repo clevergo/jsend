@@ -82,7 +82,7 @@ func getUser(ctx *clevergo.Context) error {
 		return errors.New("User Not Found")
 	}
 
-	return jsend.Success(ctx.Response, user)
+	return ctx.JSON(200, jsend.New(user))
 }
 
 func createUser(ctx *clevergo.Context) error {
@@ -111,7 +111,7 @@ func createUser(ctx *clevergo.Context) error {
 	}
 	users.insert(user)
 
-	return jsend.Success(ctx.Response, user)
+	return ctx.JSON(200, jsend.New(user))
 }
 
 func deleteUser(ctx *clevergo.Context) error {
@@ -122,7 +122,7 @@ func deleteUser(ctx *clevergo.Context) error {
 	}
 
 	users.delete(user.ID)
-	return jsend.Success(ctx.Response, nil)
+	return ctx.JSON(200, jsend.New(nil))
 }
 
 func main() {
