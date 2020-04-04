@@ -15,15 +15,26 @@ Usage is pretty simple.
 
 ```go
 // success response
-jsend.Success(w, "any type of data")
+jsend.Success(w, data)
 // fail response
-jsend.Fail(w, "any type of data")
+jsend.Fail(w, data)
 // error response
-jsend.Error(w, "error message")
+jsend.Error(w, message)
 // error response with extra code
-jsend.ErrorCode(w, "error message", errorCode)
+jsend.ErrorCode(w, message, code)
 // error response with extra code and data
-jsend.ErrorCodeData(w, "error message", errorCode, "any type of data")
+jsend.ErrorCodeData(w, message, code, data)
+```
+
+It can also be integrated with web framework, such as Gin, Echo, CleverGo:
+
+```go
+// success response
+ctx.JSON(http.StatusOK, jsend.New(data))
+// fail response
+ctx.JSON(http.StatusOK, jsend.NewFail(data))
+// error response
+ctx.JSON(http.StatusOK, jsend.Error(message, code, data))
 ```
 
 See [Example](example).
@@ -38,7 +49,7 @@ By default status code `http.StatusOK` was used implicitly,
 it can also be specified by the last parameter if necessary.
 
 ```go
-jsend.Success(w, "any type of data", http.StatusOK)
-jsend.Fail(w, "any type of data", http.StatusForbidden)
-jsend.Error(w, "error message", http.StatusInternalServerError)
+jsend.Success(w, data, http.StatusOK)
+jsend.Fail(w, data, http.StatusForbidden)
+jsend.Error(w, message, http.StatusInternalServerError)
 ```
