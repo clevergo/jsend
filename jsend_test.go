@@ -8,7 +8,6 @@ import (
 	"encoding/json"
 	"net/http"
 	"net/http/httptest"
-	"reflect"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -44,7 +43,7 @@ func TestWrite(t *testing.T) {
 		},
 	}
 
-	contentType := "application/json"
+	contentType := "application/json; charset=utf-8"
 	for _, test := range tests {
 		response := httptest.NewRecorder()
 		var err error
@@ -70,19 +69,15 @@ func TestWrite(t *testing.T) {
 		}
 
 		actualContentType := response.Header().Get("Content-Type")
-		if contentType != actualContentType {
-			t.Errorf("expected content type %q, got %q", contentType, actualContentType)
-		}
-		if test.status != 0 && test.status != response.Result().StatusCode {
-			t.Errorf("expected status code %d, got %d", test.status, response.Result().StatusCode)
+		assert.Equal(t, contentType, actualContentType)
+		if test.status != 0 {
+			assert.Equal(t, test.status, response.Result().StatusCode)
 		}
 		var actualBody Body
 		if err = json.Unmarshal(response.Body.Bytes(), &actualBody); err != nil {
 			t.Fatal(err)
 		}
-		if !reflect.DeepEqual(test.body, actualBody) {
-			t.Errorf("expected body %v, got %v", test.body, actualBody)
-		}
+		assert.Equal(t, test.body, actualBody)
 	}
 }
 
