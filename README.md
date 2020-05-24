@@ -39,7 +39,7 @@ ctx.JSON(http.StatusOK, jsend.New(data))
 // fail response
 ctx.JSON(http.StatusOK, jsend.NewFail(data))
 // error response
-ctx.JSON(http.StatusOK, jsend.Error(message, code, data))
+ctx.JSON(http.StatusOK, jsend.NewError(message, code, data))
 ```
 
 See [Example](example).
