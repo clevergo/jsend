@@ -10,7 +10,7 @@ This package is an implementation of [JSend](https://github.com/omniti-labs/jsen
 ## Installation
 
 ```shell
-go get github.com/clevergo/jsend
+go get clevergo.tech/jsend
 ```
 
 ## Usage
