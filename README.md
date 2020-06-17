@@ -1,10 +1,9 @@
 # JSend's implementation writen in Go(golang)
 [![Build Status](https://travis-ci.org/clevergo/jsend.svg?branch=master)](https://travis-ci.org/clevergo/jsend)
 [![Coverage Status](https://coveralls.io/repos/github/clevergo/jsend/badge.svg?branch=master)](https://coveralls.io/github/clevergo/jsend?branch=master)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue)](https://pkg.go.dev/github.com/clevergo/jsend)
+[![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white)](https://pkg.go.dev/clevergo.tech/jsend?tab=doc)
 [![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/jsend)](https://goreportcard.com/report/github.com/clevergo/jsend)
 [![Release](https://img.shields.io/github/release/clevergo/jsend.svg?style=flat-square)](https://github.com/clevergo/jsend/releases)
-[![Sourcegraph](https://sourcegraph.com/github.com/clevergo/jsend/-/badge.svg)](https://sourcegraph.com/github.com/clevergo/jsend?badge)
 
 This package is an implementation of [JSend](https://github.com/omniti-labs/jsend) specification written in Go(golang).
 
@@ -42,11 +41,11 @@ ctx.JSON(http.StatusOK, jsend.NewFail(data))
 ctx.JSON(http.StatusOK, jsend.NewError(message, code, data))
 ```
 
-See [Example](example).
+Checkout [example](https://github.com/clevergo/examples/tree/master/jsend) for details.
 
 ### Error Handling
 
-It is application responsibility to handle error, see [Example](example) for further more detail.
+It is application responsibility to handle error.
 
 ### Status Code
 
