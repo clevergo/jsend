@@ -1,9 +1,9 @@
 # JSend's implementation writen in Go(golang)
-[![Build Status](https://travis-ci.org/clevergo/jsend.svg?branch=master)](https://travis-ci.org/clevergo/jsend)
-[![Coverage Status](https://coveralls.io/repos/github/clevergo/jsend/badge.svg?branch=master)](https://coveralls.io/github/clevergo/jsend?branch=master)
-[![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white)](https://pkg.go.dev/clevergo.tech/jsend?tab=doc)
-[![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/jsend)](https://goreportcard.com/report/github.com/clevergo/jsend)
-[![Release](https://img.shields.io/github/release/clevergo/jsend.svg?style=flat-square)](https://github.com/clevergo/jsend/releases)
+[![Build Status](https://img.shields.io/travis/clevergo/jsend?style=for-the-badge)](https://travis-ci.org/clevergo/jsend)
+[![Coverage Status](https://img.shields.io/coveralls/github/clevergo/jsend?style=for-the-badge)](https://coveralls.io/github/clevergo/jsend?branch=master)
+[![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white&style=for-the-badge)](https://pkg.go.dev/clevergo.tech/jsend?tab=doc)
+[![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/jsend?style=for-the-badge)](https://goreportcard.com/report/github.com/clevergo/jsend)
+[![Release](https://img.shields.io/github/release/clevergo/jsend.svg?style=for-the-badge)](https://github.com/clevergo/jsend/releases)
 
 This package is an implementation of [JSend](https://github.com/omniti-labs/jsend) specification written in Go(golang).
 
