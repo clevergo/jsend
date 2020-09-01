@@ -4,7 +4,7 @@
 [![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white&style=for-the-badge)](https://pkg.go.dev/clevergo.tech/jsend?tab=doc)
 [![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/jsend?style=for-the-badge)](https://goreportcard.com/report/github.com/clevergo/jsend)
 [![Release](https://img.shields.io/github/release/clevergo/jsend.svg?style=for-the-badge)](https://github.com/clevergo/jsend/releases)
-[![Downloads](https://img.shields.io/endpoint?url=https://pkg.clevergo.tech/api/badges/downloads/month/clevergo.tech/jsend&style=for-the-badge)](https://pkg.clevergo.tech/)
+[![Downloads](https://img.shields.io/endpoint?url=https://pkg.clevergo.tech/api/badges/downloads/month/clevergo.tech/jsend&style=for-the-badge)](https://pkg.clevergo.tech/clevergo.tech/jsend)
 
 This package is an implementation of [JSend](https://github.com/omniti-labs/jsend) specification written in Go(golang).
 
