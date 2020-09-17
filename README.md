@@ -1,12 +1,12 @@
 # JSend's implementation writen in Go(golang)
-[![Build Status](https://img.shields.io/travis/clevergo/jsend?style=flat)](https://travis-ci.org/clevergo/jsend)
-[![Coverage Status](https://img.shields.io/coveralls/github/clevergo/jsend?style=flat)](https://coveralls.io/github/clevergo/jsend?branch=master)
-[![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/clevergo.tech/jsend?tab=doc)
-[![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/jsend?style=flat)](https://goreportcard.com/report/github.com/clevergo/jsend)
-[![Release](https://img.shields.io/github/release/clevergo/jsend.svg?style=flat)](https://github.com/clevergo/jsend/releases)
-[![Downloads](https://img.shields.io/endpoint?url=https://pkg.clevergo.tech/api/badges/downloads/total/clevergo.tech/jsend&style=flat)](https://pkg.clevergo.tech/clevergo.tech/jsend)
-[![Chat](https://img.shields.io/badge/chat-telegram-blue?style=flat)](https://t.me/clevergotech)
-[![Community](https://img.shields.io/badge/community-forum-blue?style=flat)](https://forum.clevergo.tech)
+[![Build Status](https://img.shields.io/travis/clevergo/jsend?style=flat-square)](https://travis-ci.org/clevergo/jsend)
+[![Coverage Status](https://img.shields.io/coveralls/github/clevergo/jsend?style=flat-square)](https://coveralls.io/github/clevergo/jsend?branch=master)
+[![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/clevergo.tech/jsend?tab=doc)
+[![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/jsend?style=flat-square)](https://goreportcard.com/report/github.com/clevergo/jsend)
+[![Release](https://img.shields.io/github/release/clevergo/jsend.svg?style=flat-square)](https://github.com/clevergo/jsend/releases)
+[![Downloads](https://img.shields.io/endpoint?url=https://pkg.clevergo.tech/api/badges/downloads/total/clevergo.tech/jsend&style=flat-square)](https://pkg.clevergo.tech/clevergo.tech/jsend)
+[![Chat](https://img.shields.io/badge/chat-telegram-blue?style=flat-square)](https://t.me/clevergotech)
+[![Community](https://img.shields.io/badge/community-forum-blue?style=flat-square&color=orange)](https://forum.clevergo.tech)
 
 This package is an implementation of [JSend](https://github.com/omniti-labs/jsend) specification written in Go(golang).
 
