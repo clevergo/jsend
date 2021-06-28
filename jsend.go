@@ -81,7 +81,7 @@ func Success(w http.ResponseWriter, data interface{}, statuses ...int) error {
 //
 // If necessary, the status code can be specified through the third parameter.
 func Write(w http.ResponseWriter, body Body, statuses ...int) error {
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	w.Header().Set("Content-Type", "application/json")
 
 	if len(statuses) > 0 {
 		w.WriteHeader(statuses[0])
