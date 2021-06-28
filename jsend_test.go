@@ -43,7 +43,7 @@ func TestWrite(t *testing.T) {
 		},
 	}
 
-	contentType := "application/json; charset=utf-8"
+	contentType := "application/json"
 	for _, test := range tests {
 		response := httptest.NewRecorder()
 		var err error
